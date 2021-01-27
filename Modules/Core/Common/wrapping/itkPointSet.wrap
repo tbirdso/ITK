@@ -2,7 +2,7 @@ itk_wrap_include("itkDefaultStaticMeshTraits.h")
 itk_wrap_include("itkDefaultDynamicMeshTraits.h")
 
 itk_wrap_class("itk::PointSet" POINTER)
-  UNIQUE(types "${WRAP_ITK_SCALAR};D")
+  UNIQUE(types "${WRAP_ITK_SCALAR};D;UI")
   foreach(d ${ITK_WRAP_IMAGE_DIMS})
     foreach(t ${types})
       itk_wrap_template("${ITKM_${t}}${d}" "${ITKT_${t}},${d}")
