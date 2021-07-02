@@ -1,5 +1,6 @@
 itk_module_test()
 set(ITKVideoCoreTests
+  itkImageToVideoFilterTest.cxx
   itkRingBufferTest.cxx
   itkTemporalRegionTest.cxx
   itkTemporalDataObjectTest.cxx
@@ -56,3 +57,9 @@ itk_add_test(
   NAME TemporalDataObjectTest
   COMMAND ITKVideoCoreTestDriver
     itkTemporalDataObjectTest )
+
+itk_add_test(
+  NAME ImageToVideoFilterTest
+  COMMAND UltrasoundTestDriver
+    itkImageToVideoFilterTest
+    "C:/repos/unstable-us/ExternalData/test/Input/rf_voltage_15_freq_0005000000_2017-5-31_12-36-44.nrrd") #FIXME
